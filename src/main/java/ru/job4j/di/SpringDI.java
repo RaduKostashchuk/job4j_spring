@@ -7,8 +7,10 @@ public class SpringDI {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.scan("ru.job4j.di");
         context.refresh();
-        StartUI startUI = context.getBean(StartUI.class);
-        startUI.add("Spring DI");
-        startUI.print();
+        StartUI startUI1 = context.getBean(StartUI.class);
+        startUI1.add("Spring DI #1");
+        StartUI startUI2 = context.getBean(StartUI.class);
+        startUI2.add("Spring DI #2");
+        startUI2.print();
     }
 }
